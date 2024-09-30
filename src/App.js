@@ -13,12 +13,14 @@ import doc5 from './Documents/Uso de la Inteligencia artificial en el desarrollo
 import doc6 from './Documents/Uso de la Inteligencia artificial en el desarrollo laboral en las Pymes de Costa Rica del 2021 - 2023 (3).pdf';
 import doc7 from './Documents/Librerías informáticas utilizadas en análisis de imágenes dermatológicas con visión computacional en las áreas de la medicina y sociedad.pdf';
 import doc8 from './Documents/LagunaJordan_ValverdeRojas_Trabajo_Investigación^N3.pdf';
+import doc9 from './Documents/LagunaJordan_ValverdeAntony_SíntesisN^N2.pdf';
 
 
 function App() {
   const sintesis = [
     { title: 'Síntesis 1', description: 'Sociedad de la Información, Sociedad Digital, Sociedad de Control', url: doc1 },
     { title: 'Síntesis 2', description: 'Contaminación del agua por metales pesados', url: doc3 },
+    { title: 'Síntesis 3', description: 'De tecnologías digitales y usos. Un recorrido por los desafíos actuales', url: doc9 },
   ];
 
   const investigaciones = [
