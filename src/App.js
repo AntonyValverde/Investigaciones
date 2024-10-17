@@ -14,7 +14,7 @@ import doc6 from './Documents/Uso de la Inteligencia artificial en el desarrollo
 import doc7 from './Documents/Librerías informáticas utilizadas en análisis de imágenes dermatológicas con visión computacional en las áreas de la medicina y sociedad.pdf';
 import doc8 from './Documents/LagunaJordan_ValverdeRojas_Trabajo_Investigación^N3.pdf';
 import doc9 from './Documents/LagunaJordan_ValverdeAntony_SíntesisN^N2.pdf';
-
+import doc10 from './Documents/LagunaJordan_ValverdeRojas_Trabajo_Investigación^NN4.pdf';
 
 function App() {
   const sintesis = [
@@ -29,6 +29,7 @@ function App() {
     { title: 'Investigación 3', description: 'Uso de la Inteligencia artificial en el desarrollo laboral en las Pymes de Costa Rica del 2021 - 2023', url: doc6 },
     { title: 'Investigación 4', description: 'Librerías informáticas utilizadas en análisis de imágenes dermatológicas con visión computacional en las áreas de la medicina y sociedad', url: doc7 },
     { title: 'Investigación 5', description: 'Implementación de la Tecnología Digital para el desarrollo de habilidades en la educación costarricense 2019-2024', url: doc8 },
+    { title: 'Investigación 6', description: 'Implementación de la tecnología inteligente para el desarrollo industrial del sector agrícola costarricense 2019-2024', url: doc10 },
   ];
   
   const articulos = [
