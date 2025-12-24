@@ -1,13 +1,91 @@
-body {
+/* src/index.css */
+:root{
+  /* layout */
+  --container: 1080px;
+  --pad-x: 16px;
+  --gap: 14px;
+
+  /* shape */
+  --radius: 14px;
+  --radius-sm: 10px;
+
+  /* typography */
+  --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+
+  /* motion */
+  --ease: cubic-bezier(.2,.8,.2,1);
+
+  /* light theme defaults */
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --surface-2: #fbfcff;
+
+  --text: #0f172a;     /* slate-900 */
+  --muted: #475569;    /* slate-600 */
+  --muted-2: #64748b;  /* slate-500 */
+
+  --border: rgba(15, 23, 42, 0.10);
+  --border-strong: rgba(15, 23, 42, 0.16);
+
+  --shadow-sm: 0 1px 2px rgba(15,23,42,.06);
+  --shadow-md: 0 10px 30px rgba(15,23,42,.08);
+
+  --accent: #2563eb; /* blue-600 */
+  --accent-ink: #0b3aa9;
+  --accent-soft: rgba(37,99,235,.10);
+
+  --focus: rgba(37,99,235,.35);
+}
+
+/* dark theme */
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg: #0b0f17;
+    --surface: rgba(255,255,255,0.06);
+    --surface-2: rgba(255,255,255,0.08);
+
+    --text: rgba(255,255,255,0.92);
+    --muted: rgba(255,255,255,0.70);
+    --muted-2: rgba(255,255,255,0.60);
+
+    --border: rgba(255,255,255,0.10);
+    --border-strong: rgba(255,255,255,0.16);
+
+    --shadow-sm: 0 1px 2px rgba(0,0,0,.25);
+    --shadow-md: 0 16px 44px rgba(0,0,0,.35);
+
+    --accent: #8ab4ff;
+    --accent-ink: #cfe0ff;
+    --accent-soft: rgba(138,180,255,.14);
+
+    --focus: rgba(138,180,255,.42);
+  }
+}
+
+*{ box-sizing: border-box; }
+html, body{ height: 100%; }
+
+body{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a{ color: inherit; }
+
+:where(a, button, input, textarea, select):focus-visible{
+  outline: 2px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 10px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  *{
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
 }

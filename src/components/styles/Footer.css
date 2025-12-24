@@ -1,0 +1,70 @@
+/* src/components/styles/Footer.css */
+.Footer{
+  margin-top: 18px;
+  border-top: 1px solid var(--border);
+  background: transparent;
+}
+
+.FooterInner{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 18px var(--pad-x);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 14px;
+}
+
+.FooterCol{
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.FooterTitle{
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: .15px;
+}
+
+.FooterText{
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.FooterList{
+  margin: 0;
+  padding-left: 16px;
+  font-size: 12.5px;
+  line-height: 1.9;
+  color: var(--muted);
+}
+
+.FooterLink{
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.FooterLink:hover{
+  border-bottom-color: color-mix(in srgb, var(--accent) 55%, transparent);
+}
+
+.FooterBottom{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 10px var(--pad-x) 18px;
+  font-size: 12px;
+  color: var(--muted-2);
+  text-align: center;
+}
+
+@media (max-width: 760px){
+  .FooterInner{
+    grid-template-columns: 1fr;
+  }
+}

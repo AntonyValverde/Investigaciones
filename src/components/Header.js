@@ -1,19 +1,18 @@
 // src/components/Header.js
-import React from 'react';
+import React from "react";
+import "./styles/Header.css";
 
 const Header = () => {
   return (
-    <header style={headerStyle}>
-      <h1>Investigaciones, Sintesis y Articulos</h1>
+    <header className="Header">
+      <div className="HeaderInner">
+        <div className="HeaderTitleWrap">
+          <h1 className="HeaderTitle">Investigaciones</h1>
+          <p className="HeaderSubtitle">Síntesis y artículos, en un solo lugar</p>
+        </div>
+      </div>
     </header>
   );
-};
-
-const headerStyle = {
-  backgroundColor: '#282c34',
-  color: 'white',
-  padding: '10px 0',
-  textAlign: 'center',
 };
 
 export default Header;

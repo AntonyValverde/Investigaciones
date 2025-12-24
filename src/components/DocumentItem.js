@@ -1,68 +1,35 @@
 // src/components/DocumentItem.js
-import React from 'react';
+import React from "react";
+import "./styles/DocumentItem.css";
 
 const DocumentItem = ({ document }) => {
   return (
-    <div style={itemStyle}>
-      <h3 style={titleStyle}>{document.title}</h3>
-      <p style={descriptionStyle}>{document.description}</p>
-      <div style={buttonContainerStyle}>
-        <a href={document.url} target="_blank" rel="noopener noreferrer" style={viewButtonStyle}>
+    <article className="DocCard">
+      <div className="DocCardTop">
+        <h3 className="DocTitle" title={document.title}>
+          {document.title}
+        </h3>
+        <p className="DocDesc" title={document.description}>
+          {document.description}
+        </p>
+      </div>
+
+      <div className="DocActions">
+        <a
+          className="DocBtn DocBtnPrimary"
+          href={document.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Ver
         </a>
-        <a href={document.url} download style={downloadButtonStyle}>
+
+        <a className="DocBtn DocBtnGhost" href={document.url} download>
           Descargar
         </a>
       </div>
-    </div>
+    </article>
   );
-};
-
-const itemStyle = {
-  border: '1px solid #ddd',
-  borderRadius: '10px',
-  padding: '20px',
-  textAlign: 'center',
-  backgroundColor: '#f9f9f9',
-  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  transition: 'transform 0.2s',
-};
-
-const titleStyle = {
-  fontSize: '1.25em',
-  marginBottom: '10px',
-  color: '#333',
-};
-
-const descriptionStyle = {
-  fontSize: '1em',
-  marginBottom: '20px',
-  color: '#555',
-};
-
-const buttonContainerStyle = {
-  display: 'flex',
-  justifyContent: 'center',
-  gap: '10px',
-};
-
-const buttonStyle = {
-  padding: '8px 16px',
-  borderRadius: '5px',
-  textDecoration: 'none',
-  color: 'white',
-  cursor: 'pointer',
-  transition: 'background-color 0.2s',
-};
-
-const viewButtonStyle = {
-  ...buttonStyle,
-  backgroundColor: '#007bff',
-};
-
-const downloadButtonStyle = {
-  ...buttonStyle,
-  backgroundColor: '#28a745',
 };
 
 export default DocumentItem;

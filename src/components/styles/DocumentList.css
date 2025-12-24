@@ -1,0 +1,14 @@
+/* src/components/styles/DocumentList.css */
+.DocGrid{
+  padding: 14px 16px 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--gap);
+}
+
+@media (max-width: 420px){
+  .DocGrid{
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+}

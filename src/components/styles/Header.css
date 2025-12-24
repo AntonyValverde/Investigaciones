@@ -1,0 +1,38 @@
+/* src/components/styles/Header.css */
+.Header{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.HeaderInner{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 14px var(--pad-x);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.HeaderTitleWrap{
+  display: grid;
+  gap: 3px;
+}
+
+.HeaderTitle{
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+.HeaderSubtitle{
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: .15px;
+}
