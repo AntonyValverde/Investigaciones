@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Antony Valverde R. · Archivo de investigación</title>
+    <meta
+      name="description"
+      content="Síntesis, trabajos de investigación y artículos científicos de Antony Valverde Rojas (Universidad Nacional de Costa Rica) sobre tecnología, sociedad e informática en Costa Rica."
+    />
+    <meta name="author" content="Antony Valverde Rojas" />
+    <meta name="theme-color" content="#07090f" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f6f5f1" media="(prefers-color-scheme: light)" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./logo192.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CR" />
+    <meta property="og:title" content="Antony Valverde R. · Archivo de investigación" />
+    <meta
+      property="og:description"
+      content="Síntesis, investigaciones y artículos científicos sobre tecnología y sociedad en Costa Rica."
+    />
+    <meta property="og:image" content="./og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Antony Valverde Rojas",
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Universidad Nacional de Costa Rica" },
+        "email": "mailto:antonyvalverde2003@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/antony-valverde-26a709274/",
+          "https://github.com/AntonyValverde"
+        ]
+      }
+    </script>
+
+    <!-- Aplica el tema antes del primer pintado para evitar parpadeo -->
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("theme");
+          if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>Necesitas habilitar JavaScript para ver este sitio.</noscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

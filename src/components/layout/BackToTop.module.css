@@ -1,0 +1,21 @@
+.btn {
+  position: fixed;
+  right: max(var(--gutter), env(safe-area-inset-right));
+  bottom: calc(var(--gutter) + env(safe-area-inset-bottom));
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-md);
+}
+.ring { position: absolute; inset: 0; rotate: -90deg; }
+.track, .fill { fill: none; stroke-width: 2; }
+.track { stroke: var(--border-strong); }
+.fill { stroke: var(--accent); stroke-linecap: round; }

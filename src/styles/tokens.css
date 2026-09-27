@@ -1,0 +1,141 @@
+/* src/styles/tokens.css — design tokens. Oscuro por defecto; claro por sistema o por elección. */
+:root {
+  color-scheme: dark;
+
+  /* tipografía */
+  --font-display: "Fraunces Variable", "Iowan Old Style", Georgia, serif;
+  --font-body: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono Variable", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --fs-hero: clamp(2.5rem, 1.2rem + 6vw, 6.5rem);
+  --fs-h2: clamp(1.75rem, 1.2rem + 2.4vw, 3.25rem);
+  --fs-h3: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+  --fs-lead: clamp(1.0625rem, 0.98rem + 0.45vw, 1.3125rem);
+  --fs-body: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
+  --fs-sm: 0.875rem;
+  --fs-meta: 0.75rem;
+
+  /* espaciado (escala de 4px) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-section: clamp(4rem, 8vw, 9rem);
+
+  /* layout */
+  --container: 1200px;
+  --gutter: 16px;
+  --nav-h: 68px;
+
+  /* forma */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-pill: 999px;
+
+  /* motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast: 160ms;
+  --dur-med: 420ms;
+
+  /* color — oscuro "noche de observatorio" */
+  --bg: #07090f;
+  --bg-elev: #0d111a;
+  --surface: rgb(255 255 255 / 0.04);
+  --surface-hover: rgb(255 255 255 / 0.07);
+  --surface-solid: #10141e;
+  --glass: rgb(13 17 26 / 0.62);
+  --glass-strong: rgb(9 12 19 / 0.88);
+  --card-bg: rgb(13 17 26 / 0.72);
+  --text: #e8ecf4;
+  --text-muted: #a3acbd;
+  --text-faint: #8891a3;
+  --border: rgb(255 255 255 / 0.08);
+  --border-strong: rgb(255 255 255 / 0.16);
+  --inner-glow: inset 0 1px 0 rgb(255 255 255 / 0.06);
+  --shadow-md: 0 18px 50px -12px rgb(0 0 0 / 0.55);
+  --shadow-lg: 0 40px 100px -20px rgb(0 0 0 / 0.7);
+  --scrim: rgb(3 5 10 / 0.72);
+
+  --accent: #5eead4;
+  --accent-ink: #062a26;
+  --c-sintesis: #a78bfa;
+  --c-investigacion: #22d3ee;
+  --c-articulo: #fbbf24;
+
+  --grain-opacity: 0.05;
+  --cat: var(--accent);
+}
+
+@media (min-width: 480px) { :root { --gutter: 20px; } }
+@media (min-width: 768px) { :root { --gutter: 32px; --nav-h: 76px; } }
+@media (min-width: 1024px) { :root { --container: 960px; } }
+@media (min-width: 1280px) { :root { --container: 1200px; } }
+@media (min-width: 1536px) { :root { --container: 1360px; } }
+@media (min-width: 1920px) { :root { --container: 1520px; } }
+
+/* claro — "papel de archivo" */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #f6f5f1;
+    --bg-elev: #ffffff;
+    --surface: rgb(255 255 255 / 0.66);
+    --surface-hover: rgb(255 255 255 / 0.92);
+    --surface-solid: #ffffff;
+    --glass: rgb(246 245 241 / 0.72);
+    --glass-strong: rgb(246 245 241 / 0.9);
+    --card-bg: rgb(255 255 255 / 0.8);
+    --text: #111418;
+    --text-muted: #4b5261;
+    --text-faint: #5d6474;
+    --border: rgb(17 20 24 / 0.1);
+    --border-strong: rgb(17 20 24 / 0.2);
+    --inner-glow: inset 0 1px 0 rgb(255 255 255 / 0.8);
+    --shadow-md: 0 18px 40px -16px rgb(17 20 24 / 0.18);
+    --shadow-lg: 0 40px 90px -24px rgb(17 20 24 / 0.3);
+    --scrim: rgb(17 20 24 / 0.5);
+    --accent: #0f766e;
+    --accent-ink: #ffffff;
+    --c-sintesis: #6d28d9;
+    --c-investigacion: #0e7490;
+    --c-articulo: #b45309;
+    --grain-opacity: 0.04;
+  }
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f6f5f1;
+  --bg-elev: #ffffff;
+  --surface: rgb(255 255 255 / 0.66);
+  --surface-hover: rgb(255 255 255 / 0.92);
+  --surface-solid: #ffffff;
+  --glass: rgb(246 245 241 / 0.72);
+    --glass-strong: rgb(246 245 241 / 0.9);
+    --card-bg: rgb(255 255 255 / 0.8);
+  --text: #111418;
+  --text-muted: #4b5261;
+  --text-faint: #5d6474;
+  --border: rgb(17 20 24 / 0.1);
+  --border-strong: rgb(17 20 24 / 0.2);
+  --inner-glow: inset 0 1px 0 rgb(255 255 255 / 0.8);
+  --shadow-md: 0 18px 40px -16px rgb(17 20 24 / 0.18);
+  --shadow-lg: 0 40px 90px -24px rgb(17 20 24 / 0.3);
+  --scrim: rgb(17 20 24 / 0.5);
+  --accent: #0f766e;
+  --accent-ink: #ffffff;
+  --c-sintesis: #6d28d9;
+  --c-investigacion: #0e7490;
+  --c-articulo: #b45309;
+  --grain-opacity: 0.04;
+}
+
+[data-cat="sintesis"] { --cat: var(--c-sintesis); }
+[data-cat="investigacion"] { --cat: var(--c-investigacion); }
+[data-cat="articulo"] { --cat: var(--c-articulo); }
